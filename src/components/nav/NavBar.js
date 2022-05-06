@@ -1,6 +1,7 @@
 import React from "react"
 import { useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
+import { GameList } from "../game/GameList"
 import "./NavBar.css"
 
 export const NavBar = () => {
@@ -8,10 +9,14 @@ export const NavBar = () => {
     return (
         <ul className="navbar">
             <li className="navbar__item">
-                Navigation link
+            <Link className="navbar__link" to="/games">
+                    Games
+                </Link>
             </li>
             <li className="navbar__item">
-                Navigation link
+            <Link className="navbar__link" to="/events">
+                    Events
+                </Link>
             </li>
             <li className="navbar__item">
                 Navigation link
