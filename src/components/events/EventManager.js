@@ -55,9 +55,9 @@ export const leaveEvent = (eventId, setRefreshState) => {
             "Authorization": `Token ${localStorage.getItem("lu_token")}`
         },
     })
-    .then(() => setRefreshState(true))
+    .then(() => setRefreshState(false))
 }
-export const signUpEvent = (eventId, setRefreshState) => {
+export const joinEvent = (eventId, setRefreshState) => {
     return fetch(`http://localhost:8000/events/${eventId}/signup`, {
         method: "POST", 
         headers:{
@@ -65,5 +65,5 @@ export const signUpEvent = (eventId, setRefreshState) => {
             "Authorization": `Token ${localStorage.getItem("lu_token")}`
         },
     })
-    .then(() => setRefreshState(true))
+    .then(() => setRefreshState(false))
 }

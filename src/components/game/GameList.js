@@ -30,7 +30,7 @@ export const GameList = (props) => {
                         <div className="game__players">{game.number_of_players} players needed</div>
                         <div className="game__skillLevel">Skill level is {game.skill_level}</div>
                     </section> 
-                    {/* <button><Link to={`/games/${game.id}/edit`}>edit</Link></button><button onClick={e => deleteGame(game.id, setRefreshState)}>Delete</button> */}
+                    <button><Link to={`/games/${game.id}/edit`}>edit</Link></button><button onClick={e => deleteGame(game.id, setRefreshState)}>Delete</button>
                     </>
                 })
             }
