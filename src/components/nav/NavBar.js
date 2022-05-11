@@ -19,7 +19,7 @@ export const NavBar = () => {
                 </Link>
             </li>
             <li className="navbar__item">
-                Navigation link
+                Admin only
             </li>
             {
                 (localStorage.getItem("lu_token") !== null) ?

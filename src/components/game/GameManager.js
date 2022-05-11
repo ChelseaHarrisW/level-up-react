@@ -1,6 +1,6 @@
 export const getGames = () => {
     return fetch("http://localhost:8000/games", {
-        headers:{
+        headers: {
             "Authorization": `Token ${localStorage.getItem("lu_token")}`
         }
     })
@@ -9,7 +9,7 @@ export const getGames = () => {
 
 export const getSingleGame = (gameId) => {
     return fetch(`http://localhost:8000/games/${gameId}`, {
-        headers:{
+        headers: {
             "Authorization": `Token ${localStorage.getItem("lu_token")}`
         }
     })
@@ -18,8 +18,8 @@ export const getSingleGame = (gameId) => {
 
 export const createGame = (game) => {
     return fetch("http://localhost:8000/games", {
-        method: `POST`, 
-        headers:{
+        method: `POST`,
+        headers: {
             "Content-Type": "application/json",
             "Authorization": `Token ${localStorage.getItem("lu_token")}`
         },
@@ -30,7 +30,7 @@ export const createGame = (game) => {
 
 export const getGameTypes = () => {
     return fetch("http://localhost:8000/gametypes", {
-        headers:{
+        headers: {
             "Authorization": `Token ${localStorage.getItem("lu_token")}`
         }
     })
@@ -39,8 +39,8 @@ export const getGameTypes = () => {
 
 export const updateGame = (game, gameId) => {
     return fetch(`http://localhost:8000/games/${gameId}`, {
-        method: "PUT", 
-        headers:{
+        method: "PUT",
+        headers: {
             "Content-Type": "application/json",
             "Authorization": `Token ${localStorage.getItem("lu_token")}`
         },
@@ -50,11 +50,11 @@ export const updateGame = (game, gameId) => {
 
 export const deleteGame = (gameId, setRefreshState) => {
     return fetch(`http://localhost:8000/games/${gameId}`, {
-        method: "DELETE", 
-        headers:{
+        method: "DELETE",
+        headers: {
             "Content-Type": "application/json",
             "Authorization": `Token ${localStorage.getItem("lu_token")}`
         },
     })
-    .then(() => setRefreshState(true))
+        .then(() => setRefreshState(true))
 }

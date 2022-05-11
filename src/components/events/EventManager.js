@@ -65,5 +65,5 @@ export const joinEvent = (eventId, setRefreshState) => {
             "Authorization": `Token ${localStorage.getItem("lu_token")}`
         },
     })
-    .then(() => setRefreshState(false))
+   
 }
